@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Genre Influence Networks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background-color: #111;
+      color: #f4f4f4;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    header {
+      background-color: #000;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 1.8rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+      margin-top: 3rem;
+      font-weight: 400;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .download-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #ddd;
+    }
+
+    .viz-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #444;
+      border-radius: 10px;
+    }
+
+    .notebook-preview {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .notebook-preview h3 {
+      margin-top: 0;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Music Genre Influence Networks</h1>
+    <p>Mapping Artist Collaboration & Linguistic Diffusion across the music landscape</p>
+  </header>
+
+  <section>
+    <h2>What is the idea?</h2>
+    <p>
+      We build a network of artists connected by collaborations, shared features, or co-listening patterns to study genre evolution and cross-genre influence. This helps uncover how musical styles evolve, how artists influence each other, and how language flows through genres.
+    </p>
+
+    <h2>Data Sources</h2>
+    <ul>
+      <li><strong><a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a></strong>: Artist metadata, genres, popularity, collaborations</li>
+      <li><strong><a href="https://docs.genius.com/" target="_blank">Genius API</a></strong>: Song lyrics</li>
+    </ul>
+    <p>Data was collected using Python tools that interact with these APIs.</p>
+
+    <h2>Network & Text Integration</h2>
+    <p>
+      Artists are represented as nodes. Edges represent collaborations or similarity in listeners. Lyrics are analyzed using NLP techniques to extract sentiment, topic patterns, and linguistic uniqueness. These are then overlaid onto the network.
+    </p>
+
+    <div class="viz-container">
+      <h2>Interactive Network Visualization</h2>
+      <iframe src="https://your-visualization-link.com"></iframe>
+    </div>
+
+    <h2>Dataset Summary</h2>
+    <ul>
+      <li><strong>Total size</strong>: ~1,000 nodes, ~10,000 edges</li>
+      <li><strong>Attributes</strong>: Genre, popularity, lyrics, number of songs</li>
+      <li><strong>Lyrics volume</strong>: 50–200 songs per artist</li>
+    </ul>
+
+    <a class="download-button" href="datasets/music_network_data.zip" download>Download Dataset</a>
+
+    <h2>Preliminary Insights</h2>
+    <ul>
+      <li>Genre clusters are identifiable via community detection</li>
+      <li>High-degree artists act as bridges across genres</li>
+      <li>Lyrical traits appear to diffuse along collaboration edges</li>
+    </ul>
+
+    <h2>Go Behind the Scenes</h2>
+    <div class="notebook-preview">
+      <h3>Explainer Notebook</h3>
+      <p>Interested in the technical side? You can explore:</p>
+      <ul>
+        <li><a href="https://nbviewer.org/github/your-repo/ExplainerNotebook.ipynb" target="_blank">View full analysis on nbviewer</a></li>
+        <li><a href="https://github.com/your-repo/ExplainerNotebook.ipynb" target="_blank">See the code on GitHub</a></li>
+      </ul>
+    </div>
+  </section>
+</body>
+
+</html>
