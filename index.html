@@ -17,11 +17,11 @@
     }
 
     header {
-      background-color: #000;
-      padding: 3rem 2rem;
-      text-align: center;
-      border-bottom: 1px solid #333;
-    }
+    background: url('background.png') center/cover no-repeat;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
 
     header h1 {
       font-size: 2.8rem;
@@ -110,7 +110,7 @@
 <body>
   <header>
     <h1>Music Genre Influence Networks</h1>
-    <p>Mapping Artist Collaboration</p>
+    <p>Mapping Genre-Based Artist Collaboration and Influence</p>
   </header>
 
   <section>
@@ -133,8 +133,10 @@
     </p>
     <h2>Network & Text Integration</h2>
     <p>
-      Artists are represented as nodes. Edges represent collaborations or similarity in listeners. Lyrics are analyzed using NLP techniques to extract sentiment, topic patterns, and linguistic uniqueness. These are then overlaid onto the network.
+      Artists are represented as nodes. Edges represent collaborations or similarity in listeners. 
+      We focus on genre-based communities, using network structure to trace how genres interact, evolve, and blend over time.
     </p>
+    
 
     <div class="viz-container">
   <h2>Interactive Network Visualization</h2>
@@ -145,6 +147,16 @@
   <img src="picture.png"
      alt="Artist Collaboration Network Comparison"
      style="width: 100%; max-width: 1000px; border-radius: 12px; display: block; margin: 2rem auto;" />
+  <h2>Genre Collaboration Networks Over Time</h2>
+  <p style="margin-bottom: 1rem;">
+    This visualization highlights how genre clusters evolve and interconnect across 2017 to 2019.
+    Each node represents a genre, and edge thickness reflects the collaboration strength between genres.
+    Community coloring helps emphasize the internal cohesion and bridging roles of certain genres.
+  </p>
+  <img src="MergedImages.png"
+       alt="Genre Collaboration Network Comparison"
+       style="width: 100%; max-width: 1200px; border-radius: 12px; display: block; margin: 2rem auto;" />
+
 </div>
 
     <h2>Dataset Summary</h2>
@@ -168,7 +180,7 @@
     <div class="notebook-preview">
       <h3>Explainer Notebook</h3>
       <ul>
-        <li><a href="https://nbviewer.org/github/your-repo/ExplainerNotebook.ipynb" target="_blank">View full analysis on nbviewer</a></li>
+        <li><a href="https://github.com/annikaljy/02467/blob/master/explainer%20notebook.ipynb" target="_blank">View full analysis on nbviewer</a></li>
         <li><a href="https://github.com/annikaljy/02467/blob/main/PABFF.ipynb" target="_blank">See the code on GitHub</a></li>
       </ul>
     </div>
