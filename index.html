@@ -121,26 +121,35 @@
 
     <h2>Data Sources</h2>
     <ul>
-      <li><strong><a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a></strong>: Artist metadata, genres, popularity, collaborations</li>
-      <li><strong><a href="https://docs.genius.com/" target="_blank">Genius API</a></strong>: Song lyrics</li>
+      <li><strong><a href="https://zenodo.org/record/4778563" target="_blank">Zenodo Dataset (2021)</a></strong>: Global artist collaboration networks (2017–2019)</li>
+      <li><strong>Spotify-derived metadata</strong>: Artist popularity, genres, followers, and other attributes (from precompiled source)</li>
+      <li><strong>Lyrics data</strong>: Integrated in the artist dataset, not extracted manually</li>
     </ul>
-    <p>Data was collected using Python tools that interact with these APIs.</p>
-
+    <p>
+      This dataset was chosen because API access (Spotify, Genius) was highly restricted or impractical for large-scale collection. Alternative dumps required too much time and manual cleaning. After spending ~3 days experimenting, we decided to use a reliable, pre-cleaned dataset from Zenodo that supports our analysis goals.
+    </p>
     <h2>Network & Text Integration</h2>
     <p>
       Artists are represented as nodes. Edges represent collaborations or similarity in listeners. Lyrics are analyzed using NLP techniques to extract sentiment, topic patterns, and linguistic uniqueness. These are then overlaid onto the network.
     </p>
 
     <div class="viz-container">
-      <h2>Interactive Network Visualization</h2>
-      <iframe src="https://your-visualization-link.com"></iframe>
-    </div>
+  <h2>Interactive Network Visualization</h2>
+  <p style="margin-bottom: 1rem;">
+    The visualization below compares artist collaboration networks across three years (2017–2019).<br/>
+    Each node represents an artist, colored by community and sized by degree.
+  </p>
+  <img src="https://github.com/annikaljy/02467/blob/master/picture.png"
+     alt="Artist Collaboration Network Comparison"
+     style="width: 100%; max-width: 1000px; border-radius: 12px; display: block; margin: 2rem auto;" />
+</div>
 
     <h2>Dataset Summary</h2>
     <ul>
-      <li><strong>Total size</strong>: ~1,000 nodes, ~10,000 edges</li>
+      <li><strong>Total size</strong>: 3 yearly networks (2017–2019), 680–1067 links each</li>
       <li><strong>Attributes</strong>: Genre, popularity, lyrics, number of songs</li>
       <li><strong>Lyrics volume</strong>: 50–200 songs per artist</li>
+      <li><strong>Artist info table</strong>: 3,612 artists with metadata</li>
     </ul>
 
     <a class="download-button" href="datasets/music_network_data.zip" download>Download Dataset</a>
@@ -150,12 +159,12 @@
       <li>Genre clusters are identifiable via community detection</li>
       <li>High-degree artists act as bridges across genres</li>
       <li>Lyrical traits appear to diffuse along collaboration edges</li>
+      <li><em>More results and visualizations will be added soon!</em></li>
     </ul>
 
     <h2>Go Behind the Scenes</h2>
     <div class="notebook-preview">
       <h3>Explainer Notebook</h3>
-      <p>Interested in the technical side? You can explore:</p>
       <ul>
         <li><a href="https://nbviewer.org/github/your-repo/ExplainerNotebook.ipynb" target="_blank">View full analysis on nbviewer</a></li>
         <li><a href="https://github.com/your-repo/ExplainerNotebook.ipynb" target="_blank">See the code on GitHub</a></li>
